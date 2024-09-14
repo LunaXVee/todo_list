@@ -1,9 +1,9 @@
 :root {
     --white: #fff;
-    --light-green: #BADD7F;
-    --dark-green: #3E8440;
+    --light-green: #fdd5df;
+    --dark-green: #fae8ed;
     --melon-pink: #EFACA5;
-    --light-pink: #F7EFDA;
+    --light-pink: #fae8ed;
 };
 
 *,
@@ -28,6 +28,8 @@ main {
   h1 {
     color: var(--white);
     margin: 20px 0 40px 0;
+    font-family: "Covered By Your Grace", cursive;
+    font-size: 60px;
   }
 
   .container {
@@ -42,6 +44,8 @@ main {
     gap: 20px;
     justify-content: flex-start;
     padding: 30px;
+    box-shadow: 22px 22px 57px #c1a4a1,
+                -22px -22px 57px #ffece7;
 }
 
 .small_containers {
@@ -55,7 +59,45 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    cursor: pointer;
 }
 
+.small_containers:hover {
+    background-image: linear-gradient(#fff0f5, #ffe0ea);;
+}
 
+/* when we click on an element, this form should pop up */
+.task-form {
+    display: flex;
+    position: absolute;
+    background-color: var(--white);
+    border-radius: 5px;
+    padding: 15px;
+    width: 550px; /* Control the width of the container */
+    height: 640px;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .close-task-form-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 20px;
+  
+  }
+
+  .close-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .task-form-header {
+    display: flex;
+    justify-content: flex-end;
+  }

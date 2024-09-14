@@ -5,17 +5,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Weather App</title>
         <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
     </head>
     <body>
         <main>
         <h1>To-Do List</h1>
         <div class="container">
-            <div class="small_containers">🥦</div>
-            <div class="small_containers">📚</div>
-            <div class="small_containers">💕</div>
-            <div class="small_containers">💭</div>
-            <div class="small_containers">🤷🏼‍♀️</div>
+            <div class="small_containers" id="food">🥦</div>
+            <div class="small_containers" id="book">📚</div>
+            <div class="small_containers" id="love">💕</div>
+            <div class="small_containers" id="thoughts">💭</div>
+            <div class="small_containers" id="other">🤷🏼‍♀️</div>
+
+            <form class="task-form hidden" id="task-form">
+                <div class="task-form-header">
+                    <button id="close-task-form-btn" class="close-task-form-btn" type="button" aria-label="close">
+                        <i class="fa-solid fa-x close-icon"></i>
+                    </button>
+                  </div>
+            </form>
         </div>
     </main>
+    <script src="script.js"></script>
     </body>
     </html>
