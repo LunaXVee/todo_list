@@ -1,9 +1,9 @@
 :root {
     --white: #fff;
-    --light-grey: #f5f6f7;
-    --dark-grey: #0a0a23;
-    --yellow: #f1be32;
-    --golden-yellow: #feac32;
+    --light-green: #BADD7F;
+    --dark-green: #3E8440;
+    --melon-pink: #EFACA5;
+    --light-pink: #F7EFDA;
 };
 
 *,
@@ -15,7 +15,7 @@
 }
 
 body {
-    background-color: var(--dark-grey);
+    background-color: var(--light-green);
 }
 
 main {
@@ -26,19 +26,36 @@ main {
   }
 
   h1 {
-    color: var(--light-grey);
+    color: var(--white);
     margin: 20px 0 40px 0;
   }
 
   .container {
-    background-color: var(--white);
-    width: 300px;
-    height: 350px;
-    border: 5px solid var(--yellow);
+    background-color: var(--light-pink);
+    width: 500px; /* Control the width of the container */
+    height: auto;
+    border: 5px solid var(--dark-green);
     border-radius: 8px;
-    padding: 15px;
-    position: relative;
+    padding: 20px;
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
+    flex-wrap: wrap; /* Wrap items to the next line */
+    gap: 20px;
+    justify-content: flex-start;
+    padding: 30px;
+}
+
+.small_containers {
+    background-color: var(--white);
+    flex-basis: calc(50% - 10px); /* Ensure two items per row */
+    height: 200px;
+    position: relative;
+    border-radius: 5%;
+    box-sizing: border-box; /* Ensure padding and border are included */
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
