@@ -4,6 +4,9 @@
     --dark-green: #fae8ed;
     --melon-pink: #EFACA5;
     --light-pink: #fae8ed;
+    --light-color: #f0f0f0;
+    --dark-color: #272727;
+    --primary-color: #4580ff;
 };
 
 *,
@@ -26,10 +29,19 @@ main {
   }
 
   h1 {
-    color: var(--white);
+    color: var(--light-color);
     margin: 20px 0 40px 0;
     font-family: "Covered By Your Grace", cursive;
     font-size: 60px;
+    text-shadow: -1px 0 var(--melon-pink), 0 1px var(--melon-pink), 1px 0 black, 0 -1px black;
+  }
+
+ 
+  .fa-pencil {
+    color: var(--light-color);
+    text-shadow: none;
+    text-shadow: -1px 0 var(--melon-pink), 0 1px var(--melon-pink), 1px 0 black, 0 -1px black;
+
   }
 
   .container {
@@ -63,7 +75,9 @@ main {
 }
 
 .small_containers:hover {
-    background-image: linear-gradient(#fff0f5, #ffe0ea);;
+    border: 1px solid var(--melon-pink);
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, var(--light-green) 0 -3px 0 inset;
+  transform: translateY(-2px);
 }
 
 /* when we click on an element, this form should pop up */
@@ -100,4 +114,141 @@ main {
   .task-form-header {
     display: flex;
     justify-content: flex-end;
+    height: 30px;
   }
+
+
+
+
+
+
+/*styling the list objects now*/
+.toDo-items{
+  transform: translateY(-110%);
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--light-color);
+  outline: none;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+.row input{
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  background: transparent;
+  font-size: 1.3em;
+  letter-spacing: 1px;
+}
+
+.row input::placeholder {
+  color: var(--primary-color);
+}
+
+.row button{
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #4580ff 100%);
+  border: none;
+  border-radius: 30px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  color: #fff;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 30px;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  font-size: 1.3em;
+}
+
+.row button:hover{
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.row button:active{
+  box-shadow: #3c4fe0;
+}
+
+.row button i {
+  margin-left: 10px;
+  margin-right: -10px;
+}
+
+ul {
+  padding-left: 0;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  font-size: 1.3em;
+  letter-spacing: 1px;
+  padding: 12px;
+  user-select: none;
+  cursor: pointer;
+  background-color: var(--light-color);
+  border-radius: 30px;
+  margin-block: 10px;
+}
+
+ul li::before {
+  content: "\f111"; /* adds cicrles*/
+  font-family: "Font Awesome 6 Free";
+  font-size: 1.2em;
+  color: var(--primary-color);
+  margin-right: 15px;
+  display: inline-block;
+}
+
+ul li.checked {
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 50px;
+}
+
+ul li.checked::before {
+  color: var(--light-color);
+  content: "\f058"; /*adds checked cicrle*/
+  font-family: "Font Awesome 6 Free";
+}
+
+/*adds x marks on everylist item*/
+ul li span {
+  margin-left: auto;
+  width: 30px;
+  height: 30px;
+  font-size: 1.6em;
+  color: var(--primary-color);
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul li.checked span {
+  color: #fff;
+}
+
+ul li.checked span:hover {
+  background: #fff;
+  color: var(--dark-color);
+}
+
+ul li span:hover {
+  background: var(--primary-color);
+  color: #fff;
+}

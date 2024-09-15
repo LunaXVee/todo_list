@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Weather App</title>
+        <title>To-Do List App</title>
         <link rel="stylesheet" href="./style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +12,7 @@
     </head>
     <body>
         <main>
-        <h1>To-Do List</h1>
+        <h1>To-Do List <i class="fa-solid fa-pencil"></i></h1>
         <div class="container">
             <div class="small_containers" id="food">🥦</div>
             <div class="small_containers" id="book">📚</div>
@@ -26,6 +26,17 @@
                         <i class="fa-solid fa-x close-icon"></i>
                     </button>
                   </div>
+                  <div class="toDo-items">
+                  <div class="row">
+                    <input type="text" id="input-box" placeholder="Add your Todos..">
+                    <button role="button" onclick="addTask()">Add<i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <ul id="list-container">
+                    <li class="checked">Task 1<span></span></li>
+                    <li> Task 2 </li>
+                    <li>Task 3</li>
+                  </ul>
+                </div>
             </form>
         </div>
     </main>
